@@ -47,7 +47,7 @@ gulp.task('copyfonts', function(){
 });
 
 gulp.task('imagemin', function() {
-	gulp.src('img/*.{png,jpg,gif}')
+	gulp.src('img/**/*.{png,jpg,gif}')
 	.pipe(imagemin({ optimizationlevel: 3, progressive: true, interlaced: true}))
 	.pipe(gulp.dest('dist/img'))
 });

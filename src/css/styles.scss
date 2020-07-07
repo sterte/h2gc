@@ -1,10 +1,8 @@
 $lt-gray: #ddd;
-$background-dark: #00ff00;
-$background-light: #aaffaa;
-$background-pale: #eeeeee;
+$background-dark: #000000;
+$background-light: #e8ea28;
+$background-pale: #aaaaaa;
 
-// Height variables
-$carousel-item-height: 300px;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
 	margin:0px auto;
@@ -29,7 +27,7 @@ $carousel-item-height: 300px;
 .jumbotron {
     @include zero-margin(70px,30px);
     background: $background-light ;
-    color:floralwhite;
+    color:black;
 }
 
 address{
@@ -54,26 +52,6 @@ body{
     padding: 10px;
 }
 
-.carousel {
-    background:$background-dark;
-
-    .carousel-item {
-        height: $carousel-item-height;
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-height: 300px;
-        }
-    }
-}
-
-#carouselButton {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
-    z-index: 1;
-}
 
 .modal-content{
 	.modal-header {
@@ -88,4 +66,8 @@ body{
 	.modal-body {
 		background: $background-pale;	
 	}
+}
+
+.card-header {
+    background: $background-light;   
 }
