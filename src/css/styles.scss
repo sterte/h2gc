@@ -71,3 +71,11 @@ body{
 .card-header {
     background: $background-light;   
 }
+
+#accordion,#accordion2 {
+    .card {
+        .card-header {
+            background: $background-pale;   
+        }
+    }
+}
