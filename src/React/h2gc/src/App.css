@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
-}
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.footer {
+  background-color: #aaaaaa;
+  margin: 0px auto;
+  padding: 20px 0px; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.jumbotron {
+  margin: 0px auto;
+  padding: 70px 30px;
+  background: #e8ea28;
+  color: black; }
 
-.App-link {
-  color: #61dafb;
-}
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0; }
+
+.navbar-dark {
+  background-color: #000000; }
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px; }
+
+.modal-content .modal-header {
+  background: #000000;
+  color: floralwhite; }
+  .modal-content .modal-header .close {
+    color: floralwhite; }
+
+.modal-content .modal-body {
+  background: #aaaaaa; }
+
+.card-header {
+  background: #e8ea28; }
+
+#accordion .card .card-header, #accordion2 .card .card-header {
+  background: #aaaaaa; }
