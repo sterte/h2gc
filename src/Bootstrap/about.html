@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">    
+  <!-- endbuild -->
+
+  <title>Hitchhickers' guide to Cinema: About</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" height="40" alt="logo">
+      </a>
+      <div class="collapse navbar-collapse" id="Navbar">            
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>                    
+          <li class="nav-item"><a class="nav-link" href="./search.html"><span class="fa fa-search fa-lg"></span> Search</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#"><span class="fa fa-info fa-lg"></span> About</a></li>                    
+        </ul>
+        <span class="navbar-text">
+          <a id="loginLink">
+            <span class="fa fa-sign-in"></span> Login
+          </a>
+        </span>
+
+        <span class="navbar-text ml-3">
+          <a data-container="body" data-toggle="popover" data-placement="bottom" data-content="This is just a prototype.<br/><span class='fa fa-question-circle-o'></span> icon will give you hint about what the final version should be." data-html="true">
+          <span class="fa fa-question-circle-o"></span> Info
+        </a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<header class="jumbotron">
+  <div class="container">
+    <div class="row row-header">
+      <div class="col-12 col-sm-6">
+        <h1>Hitchhikers' guide to Cinema</h1>
+        <h3>Easily perform complex searches on the history of cinema!!!</h3>
+      </div>
+      <div class="d-none d-sm-block col-12 col-sm-6 align-self-center">
+        <div class="row row-header justify-content-center">
+          <div class="col-12 col-sm-6 align-self-center">
+            <img src="img/logo.png" class="img-fluid" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <ol class="col-12 breadcrumb">
+      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+      <li class="breadcrumb-item active">About</li>
+    </ol>
+    <div class="col-12">
+     <h2>About</h2>
+     <hr>
+   </div>
+ </div>
+
+ <div class="row row-content align-items-center">
+  <div class="col-12">
+    <h3>What's this...</h3>
+    <p>The main idea behind Hitchickers' guide to Cinema is to offer a strightforward way to make complex searches on the <a href="http://www.imdb.com" target="_blank">IMDB</a> database via any kind of device.</p>
+    <p>It started as a bonus project related to a coursera full-stack javascript development course. The project will be developed in parallel with the course and the new topic that will be tackled.</p>
+    <hr>
+  </div>
+
+  <div class="col-12">
+    <h3>About me</h3>
+    <p>My name is Stefano Arteconi, I am a Ph.D. in computer science at the university of Bologna (Italy), I have more than 10 years experience of software developing and team leading. Unfortunately I never worked in the web/mobile applications domain, so I decided it was time to get a grip of it, joined a <a href="https://www.coursera.org/specializations/full-stack-react" target="_blank">full-stack javascript course on Coursera</a> and started this project in parallel.</p>
+    <hr>
+  </div>
+
+  <div class="col-12">
+    <h3>More Info</h3>
+    <p>If you are interested in more info about the project, you can find the code and documentation repository publicly available on <a href="https://bitbucket.org/sterte/h2gc/src/master/" target="_blank">BitBucket</a>.</p>
+    <p>Below you can find a schematic of the history of the project and wanted features.</p>
+  </div>
+</div>
+
+<div class="row row-content align-items-top">
+  <div class="col-12">
+    <h3>History</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Date</th>
+            <th>What's new</th>
+            <th>Expected next features</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>9/7/20</th>
+            <td><ul><li>First static version of <i>Search</i> page</li> <li>First static version of <i>Search Result</i> page</li></ul></td>
+            <td><ul><li>Various cosmetic fixes</li></ul></td>
+            <td><ul><li>The mockup first version is complete, apart form minor cosmetic fixes. The next step are related to the development of the back-end.</li></ul></td>            
+          </tr>
+          <tr>
+            <th>8/7/20</th>
+            <td><ul><li>First static version of <i>Movie Detail</i> page</li> <li>First static version of <i>Person Detail</i> page</li></ul></td>
+            <td><ul><li>Static version of Basic and Advanced search forms and result pages</li></ul></td>
+            <td><ul><li>As a general choice, the page will not be focused on giving exhaustive details, on the contrary it will present summary data and related links to IMDb pages for full data.</li><li>Advanced search form will be a trivial prototype, it might change drastically in the future when database related problems will be tackled</li></ul>.</td>
+          </tr>
+          <tr>
+            <th>7/7/20</th>
+            <td><ul><li>First static version of <i>index</i> page</li> <li>First static version of <i>about</i> page</li></ul></td>
+            <td><ul><li>Static version of <i>Movie detail</i> page</li> <li>Static version of <i>Person detail</i> page</li></ul></td>
+            <td><ul><li>Temporary Info buttons to explain the current status and the goal of the components have been added throughout the pages</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">             
+      <div class="col-4 offset-1 col-sm-5">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./search.html">Search</a></li>
+          <li><a href="#">About</a></li>                                                
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-5 align-self-center">
+        <div class="text-center">
+          <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+          <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+          <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+          <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+          <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+          <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <p>© Copyright 2020 Stefano Arteconi</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<!-- build:js js/main.js -->    
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<!-- endbuild -->    
+</body>
+
+</html>
