@@ -98,21 +98,16 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 				<span className="fa fa-home fa-lg"></span> Home
 				</NavLink>
 				</NavItem>
+				<NavItem>				
+				<NavLink className="nav-link" to="/search">
+				<span className="fa fa-address-card fa-lg"></span> Search				
+				</NavLink>
+				</NavItem>
 				<NavItem>
 				<NavLink className="nav-link" to="/aboutus">
 				<span className="fa fa-info fa-lg"></span> About
 				</NavLink>
-				</NavItem>
-				<NavItem>
-				<NavLink className="nav-link" to="/menu">
-				<span className="fa fa-list fa-lg"></span> Menu
-				</NavLink>
-				</NavItem>
-				<NavItem>
-				<NavLink className="nav-link" to="/contactus">
-				<span className="fa fa-address-card fa-lg"></span> Contact Us
-				</NavLink>
-				</NavItem>
+				</NavItem>				
 				</Nav>
 				<Nav className="ml-auto">
 				<NavItem>
@@ -128,9 +123,19 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 				<div className="container">
 				<div className="row row-header">
 				<div className="col-12 col-sm-6">
-				<h1>Ristorante Con Fusion</h1>
-				<p>We take inspiration from blabla</p>
+				<h1>Hitchhikers' guide to Cinema</h1>
+				<h3>Easily perform complex searches on the history of cinema!!!</h3>
 				</div>
+
+				<div className="d-none d-sm-block col-12 col-sm-6 align-self-center">
+				<div className="row row-header justify-content-center">
+				<div className="col-12 col-sm-6 align-self-center">
+				<img src="assets/images/logo.png" className="img-fluid" alt="logo" />
+				</div>
+				</div>
+				</div>
+
+
 				</div>
 				</div>
 				</Jumbotron>
@@ -161,7 +166,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 
 				</>
 				);
+			}
 		}
-	}
 
-	export default Header;
+		export default Header;

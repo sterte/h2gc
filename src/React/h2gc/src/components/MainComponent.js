@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
-//import Menu from './MenuComponent';
-//import Contact from './ContactComponent';
-//import About from './AboutComponent';
-//import DishDetail from './DishDetailComponent';
+import About from './AboutComponent';
+import * as SearchTypes from '../shared/SearchTypes';
+import Search from './SearchComponent';
 import Header from './HeaderComponent'
 import Footer from './FooterComponent'
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -14,8 +13,8 @@ import { fetchMovies, fetchPeople } from '../redux/ActionCreators';
 
 const mapStateToProps = (state) => {
   return {
-    movies: { movies: state.movies }, //TEMP! TO DEAL WITH STATIC JSON RATHER THAN ACTUAL FETCH
-    people: { people: state.people }
+    movies: state.movies,
+    people: state.people
   }
 }
 
@@ -34,25 +33,19 @@ class Main extends Component {
 
   render() {
 
-      const HomePage = () => {
+    const HomePage = () => {
       return(
         <Home
         movie={this.props.movies.movies}
         moviesLoading={this.props.movies.isLoading}
         moviesErrMess={this.props.movies.errMess}
-        person={this.props.people.people}
-        peopleLoading={this.props.people.isLoading}
-        peopleErrMess={this.props.people.errMess}
+        person={this.props.people}
+        peopleLoading={this.props.isLoading}
+        peopleErrMess={this.props.errMess}
         />
         );
     }
 
-      /*
-      <Route exact path ="/menu" component={() => <Menu dishes={this.props.dishes} /> } />
-      <Route path="/menu/:dishId" component={DishWithId} />
-      <Route path="/contactus" component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback} />} />
-      <Route path="/aboutus" component={ () => <About leaders={this.props.leaders} /> } />
-      */
     return (
       <div>      
       <Header />
@@ -60,7 +53,11 @@ class Main extends Component {
       <CSSTransition key={this.props.location.key} classNames="page" timeout={300} >
       <Switch>
       <Route path="/home" component={HomePage} />
-
+      <Route exact path="/search" component={ () => <Search type={SearchTypes.SEARCH_NONE} /> } />
+      <Route path="/search/movies" component={ () => <Search type={SearchTypes.SEARCH_MOVIES} /> } />
+      <Route path="/search/people" component={ () => <Search type={SearchTypes.SEARCH_PEOPLE} /> } />
+      <Route path="/search/advanced" component={ () => <Search type={SearchTypes.SEARCH_ADVANCED} /> } />
+      <Route path="/aboutus" component={About} />
       <Redirect to="/home" />
       </Switch>
       </CSSTransition>
@@ -68,8 +65,8 @@ class Main extends Component {
       <Footer />
       </div>
       );
+    }
   }
-}
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
 

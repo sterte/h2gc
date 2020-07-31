@@ -1,0 +1,4 @@
+export const SEARCH_NONE = 'SEARCH_NONE';
+export const SEARCH_MOVIES = 'SEARCH_MOVIES';
+export const SEARCH_PEOPLE = 'SEARCH_PEOPLE';
+export const SEARCH_ADVANCED = 'SEARCH_ADVANCED';

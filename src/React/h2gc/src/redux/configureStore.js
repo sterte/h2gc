@@ -1,5 +1,4 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { createForms } from 'react-redux-form';
 import { Movies } from './movies';
 import { People } from './people';
 import thunk from 'redux-thunk';
