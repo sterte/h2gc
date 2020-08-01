@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle} from 'reactstrap';
+import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { Fade, Stagger } from 'react-animation-components';
-
+import { baseUrl } from '../shared/baseUrl';
 
 
 
@@ -22,7 +23,6 @@ function RenderCard({title, item, isLoading, errMess}) {
 }
 
 function RenderCardBody({title, item, isLoading, errMess}) {
-
 	
 	if(isLoading){
 		return(
@@ -44,13 +44,13 @@ function RenderCardBody({title, item, isLoading, errMess}) {
 				<Stagger in>
 				<div className="row mt-3">
 				<div className="col-10">
-				<h3>{movie.title.title}</h3>
+				<h3><Link to={'movieDetail/' + movie.id} >{movie.title}</Link></h3>				
 				</div>
 				<div className="col-2">
-				<CardImg src={movie.title.image.url} alt={movie.title.title} width="100%"/>
+				<CardImg src={baseUrl + 'assets/images/' + movie.image} alt={movie.title} width="100%"/>
 				</div>
 				<div className="col-12">
-				{movie.plotSummary.text}
+				{movie.summary}
 				<hr/>
 				</div>
 				</div>
@@ -69,14 +69,18 @@ function RenderCardBody({title, item, isLoading, errMess}) {
 
 
 	function Home(props) {
+
+		const releasedMovies = props.movies.filter(movie => movie.released);
+		const unreleasedMovies = props.movies.filter(movie => !movie.released);
+
 		return (
 		<div className="container">
 		<div className="row align-items-start mt-3">
 		<div className="col-12 col-md-6 ">
-		<RenderCard title="Recently Released" item={props.movie} isLoading={props.moviesLoading} errMess={props.moviesErrMess} />
+		<RenderCard title="Recently Released" item={releasedMovies} isLoading={props.moviesLoading} errMess={props.moviesErrMess} />
 		</div>
 		<div className="col-12 col-md-6 ">
-		<RenderCard title="Imminent Release" item={props.movie} isLoading={props.moviesLoading} errMess={props.moviesErrMess} />
+		<RenderCard title="Imminent Release" item={unreleasedMovies} isLoading={props.moviesLoading} errMess={props.moviesErrMess} />
 		</div>				
 		</div>
 		</div>

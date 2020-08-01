@@ -53,8 +53,14 @@ function About(props) {
       </thead>
       <tbody>
       <tr>
+      <th>1/8/20</th>
+      <td><ul><li>Firt react app version of person detail component.</li><li>Firt react app version of movie detail component.</li></ul></td>
+      <td><ul><li>Next improvement will be regarding backend functionality and actual REST API addition.</li></ul></td>
+      <td><ul><li>The website currently runs with a minimal rest api created manually, as a proof of concept for the future development with real REST API.</li><li>Search form are still very rudimental, thy will be dealt with in detail when linking to a becjaend and REST API.</li></ul></td>            
+      </tr>
+      <tr>
       <th>31/7/20</th>
-      <td><ul><li>First proptotype of the website as a react app</li> <li>Firt react app version of home component</li><li>First react app version of about page</li><li>First react app version of search page</li></ul></td>
+      <td><ul><li>First proptotype of the website as a react app</li> <li>First react app version of home component</li><li>First react app version of about page</li><li>First react app version of search page</li></ul></td>
       <td><ul><li>Improve movies card structure and contents in the home page</li><li>First react app version of result search page</li><li>Start using actual links with actual data retrieval (i.e. from homepage to movie/person details)</li></ul></td>
       <td><ul><li>A small fake db is been created extracting data manually from IMDb rest api, as a Redux and Fetch testbed.</li><li>Popover buttons still present but still not working (they will probablu disappear).</li></ul></td>            
       </tr>

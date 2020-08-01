@@ -8,7 +8,7 @@ export const ConfigureStore = () => {
 	const store = createStore(
 		combineReducers({
 			movies: Movies,
-			poeple: People			
+			people: People			
 		}),
 
 		applyMiddleware(thunk, logger)

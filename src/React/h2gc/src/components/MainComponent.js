@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import About from './AboutComponent';
+import PersonDetail from './PersonDetailComponent';
+import MovieDetail from './MovieDetailComponent';
 import * as SearchTypes from '../shared/SearchTypes';
 import Search from './SearchComponent';
 import Header from './HeaderComponent'
@@ -36,13 +38,37 @@ class Main extends Component {
     const HomePage = () => {
       return(
         <Home
-        movie={this.props.movies.movies}
+        movies={this.props.movies.movies}
         moviesLoading={this.props.movies.isLoading}
         moviesErrMess={this.props.movies.errMess}
-        person={this.props.people}
-        peopleLoading={this.props.isLoading}
-        peopleErrMess={this.props.errMess}
+        people={this.props.people.people}
+        peopleLoading={this.props.people.isLoading}
+        peopleErrMess={this.props.people.errMess}
         />
+        );
+    }
+
+    const PersonDetailWithId = ({match}) => {
+      return( 
+        <PersonDetail id={match.params.personId}
+        people={this.props.people.people}
+        peopleLoading={this.props.people.isLoading}
+        peopleErrMess={this.props.people.errMess} 
+        movies={this.props.movies.movies}
+        moviesLoading={this.props.movies.isLoading}
+        moviesErrMess={this.props.movies.errMess}/>
+        );
+    }
+
+    const MovieDetailWithId = ({match}) => {
+      return( 
+        <MovieDetail id={match.params.movieId}
+        people={this.props.people.people}
+        peopleLoading={this.props.people.isLoading}
+        peopleErrMess={this.props.people.errMess} 
+        movies={this.props.movies.movies}
+        moviesLoading={this.props.movies.isLoading}
+        moviesErrMess={this.props.movies.errMess}/>
         );
     }
 
@@ -56,6 +82,8 @@ class Main extends Component {
       <Route exact path="/search" component={ () => <Search type={SearchTypes.SEARCH_NONE} /> } />
       <Route path="/search/movies" component={ () => <Search type={SearchTypes.SEARCH_MOVIES} /> } />
       <Route path="/search/people" component={ () => <Search type={SearchTypes.SEARCH_PEOPLE} /> } />
+      <Route path="/persondetail/:personId" component={PersonDetailWithId} />
+      <Route path="/moviedetail/:movieId" component={MovieDetailWithId} />
       <Route path="/search/advanced" component={ () => <Search type={SearchTypes.SEARCH_ADVANCED} /> } />
       <Route path="/aboutus" component={About} />
       <Redirect to="/home" />
