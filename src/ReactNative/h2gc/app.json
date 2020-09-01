@@ -1,0 +1,12 @@
+{
+  "name": "h2gc",
+  "displayName": "h2gc",
+  "expo": {
+    "name": "h2gc",
+    "slug": "h2gc",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
