@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, FlatList, Image } from 'react-native';
+import { Text, ScrollView, View, FlatList, Image } from 'react-native';
 import { Card } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { fetchMovies, fetchPeople } from '../redux/ActionCreators';
@@ -19,25 +19,6 @@ const mapDispatchToProps = (dispatch) => ({
 fetchMovies: () => {dispatch(fetchMovies())},
 fetchPeople: () => {dispatch(fetchPeople())}
 });
-
-
-/*
-const renderCardItem = ({item, index}) => {
-    return(
-    <View>
-    <ListItem
-    key={index}
-    style={{margin:10}}
-    onPress={() => {}}
-    title={item.title}
-    subtitle={item.description}
-    leftAvatar={{source: {uri: baseUrl + 'images/logo.png'}}}
-    />    
-    </View>
-    );
-}
-*/
-
 
 
 class Home extends Component {    
@@ -98,10 +79,10 @@ class Home extends Component {
         const unreleasedMovies = this.props.movies;//.filter(movie => !movie.released);
         const { navigate } = this.props.navigation;
         return(
-            <View>
+            <ScrollView>
                 <RenderCard isLoading={this.props.movies.isLoading} errMess={this.props.movies.errMess} movies={this.props.movies.movies} isReleased={false} />
                 <RenderCard isLoading={this.props.movies.isLoading} errMess={this.props.movies.errMess} movies={this.props.movies.movies} isReleased={true} />
-            </View>
+            </ScrollView>
         );
     };
 }
