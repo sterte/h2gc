@@ -1,0 +1,3 @@
+[submodule "src/ReactNative/h2gc"]
+	path = src/ReactNative/h2gc
+	url = https://github.com/sterte/h2gc/tree/master/src/ReactNative
