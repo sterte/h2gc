@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, Platform, Image, StyleSheet, ScrollView, Text } from 'react-native';
 import Home from './HomeComponent';
 import Login from './LoginComponent';
+import MovieDetail from './MovieDetailComponent';
+import PersonDetail from './PersonDetailComponent';
 import { createAppContainer, SafeAreaView } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
@@ -9,7 +11,31 @@ import { Icon } from 'react-native-elements';
 
 
 const HomeNavigator = createStackNavigator({
-    Home: { screen: Home }
+    Home: {
+        screen: Home,
+        navigationOptions: ({navigation}) => ({
+            headerStyle: {
+                backgroundColor: "#e8ea28"
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: 'black'            
+            },
+            headerLeft: () => <Icon name='menu' size={24} color='black' onPress={() => navigation.toggleDrawer()} />
+        })
+    },
+    MovieDetail: {
+        screen: MovieDetail,
+        navigationOptions: {
+            title: 'Movie Detail'
+        }
+    },
+    PersonDetail: {
+        screen: PersonDetail,
+        navigationOptions: {
+            title: 'Person Detail'
+        }
+    }
 },
 {        
     defaultNavigationOptions: ({navigation}) => ({
@@ -74,7 +100,7 @@ const MainNavigator = createDrawerNavigator({
 			drawerLabel: 'Home',
             drawerIcon: ({tintColor}) => (<Icon name='sign-in' type='font-awesome' size={24} color={tintColor} />)
 		}
-	}
+    }
 },
 {
     initialRouteName: 'Home',

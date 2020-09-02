@@ -33,7 +33,7 @@ class Home extends Component {
 
         const renderCardItem = ({item, index}) => {
             return(
-                <TouchableHighlight onPress={() => navigate('Login')}>            
+                <TouchableHighlight onPress={() => navigate('MovieDetail', {movieId: item.id})}>            
                 <View key={index} style={{margin:10, flexDirection: 'row', justifyContent: 'flex-start'}}>
                 <Image source={{uri: baseUrl + 'images/logo.png'}} style={{width:40, height: 20, marginRight: 20}} />
                 <View>
@@ -64,7 +64,7 @@ class Home extends Component {
                     <View>
                     <Card>
                         <Card.Title style={{backgroundColor: '#e8ea28', margin:10, padding:10}}>{title}</Card.Title>
-                        <FlatList data={items} renderItem={renderCardItem} keyExtractor={item => item.id.toString()} />
+                        <FlatList data={items} renderItem={renderCardItem} keyExtractor={item => item.id} />
                         </Card>
                         </View>
                 );
