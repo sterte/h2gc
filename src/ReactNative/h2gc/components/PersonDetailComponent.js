@@ -48,7 +48,7 @@ class PersonDetail extends Component {
                     <Card>
                         <Card.Title style={{backgroundColor: '#e8ea28', margin:10, padding:10}}>{fullName}</Card.Title>                                                                        
                         <View style={{flexDirection: 'row'}}>                        
-                        <Image resizeMode='contain' source={{uri: baseUrl + 'images/logo.png'}} style={{width: 100, margin: 10}} />                        
+                        <Image resizeMode='contain' source={{uri: baseUrl + 'images/' + person.image}} style={{width: 100, margin: 10}} />                        
                         <View style={{flexDirection: 'column'}}>                        
                         <Text style={{flexWrap: 'wrap', marginBottom: 10}}>Born: {person.birthDate}, {person.birthPlace}</Text>
                         {death}

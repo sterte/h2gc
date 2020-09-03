@@ -35,7 +35,7 @@ class Home extends Component {
             return(
                 <TouchableHighlight onPress={() => navigate('MovieDetail', {movieId: item.id})}>            
                 <View key={index} style={{margin:10, flexDirection: 'row', justifyContent: 'flex-start'}}>
-                <Image source={{uri: baseUrl + 'images/logo.png'}} style={{width:40, height: 20, marginRight: 20}} />
+                <Image source={{uri: baseUrl + 'images/' + item.image}} style={{width:40, height: 20, marginRight: 20}} />
                 <View>
                 <Text style={{fontSize: 14}}>{item.title}</Text>
                 <Text style={{fontSize: 12}}>{item.summary}</Text>               

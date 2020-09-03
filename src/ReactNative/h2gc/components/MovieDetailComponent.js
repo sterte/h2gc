@@ -45,7 +45,7 @@ class MovieDetail extends Component {
                     <Card>
                         <Card.Title style={{backgroundColor: '#e8ea28', margin:10, padding:10}}>{movie.title}</Card.Title>                                                
                         <View style={{flexDirection: 'row'}}>                        
-                        <Image resizeMode='contain' source={{uri: baseUrl + 'images/logo.png'}} style={{width: 100, margin: 10}} />                        
+                        <Image resizeMode='contain' source={{uri: baseUrl + 'images/' + movie.image}} style={{width: 100, margin: 10}} />                        
                         <View style={{flexDirection: 'column'}}>                        
                         <Text style={{flexWrap: 'wrap', marginBottom: 10}}>Rating: {movie.rating}</Text>
                         <Text style={{flexWrap: 'wrap', marginBottom: 10}}>Duration: {movie.duration}</Text>
